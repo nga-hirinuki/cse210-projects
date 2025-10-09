@@ -1,27 +1,27 @@
-// declare a namespace
 public class Comment
 {
-    // member variables
+    // Backing fields for the properties.
     private string _commenter;
     private string _text;
 
-    // constructor
+    // Constructor to initialize the Comment object.
     public Comment(string commenter, string text)
     {
         _commenter = commenter;
-        _text = text;  
+        _text = text;
     }
 
-    // member methods
-    public string commenter
+    // Expanded property for the name of the commenter.
+    public string Commenter
     {
         get { return _commenter; }
         set { _commenter = value; }
     }
 
-    public string text
+    // Expanded property for the text of the comment.
+    public string Text
     {
         get { return _text; }
         set { _text = value; }
     }
-}// define a class
+}

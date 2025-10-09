@@ -1,13 +1,14 @@
+using System.Collections.Generic;
 
 public class Video
 {
-    // member variables
+    // Backing fields for the properties.
     private string _title;
     private string _author;
-    private int _length; // in seconds
-    private List<Comment> _comments;
+    private int _length;
+    private List<Comment> _comments = new List<Comment>();
 
-    // constructor
+    // Constructor to initialize the Video object.
     public Video(string title, string author, int length)
     {
         _title = title;
@@ -15,30 +16,34 @@ public class Video
         _length = length;
     }
 
-    // member methods
-    public string title
+    // Expanded property for Title.
+    public string Title
     {
         get { return _title; }
         set { _title = value; }
     }
 
-    public string author
+    // Expanded property for Author.
+    public string Author
     {
         get { return _author; }
         set { _author = value; }
     }
 
-    public int length
+    // Expanded property for Length (in seconds).
+    public int Length
     {
         get { return _length; }
         set { _length = value; }
     }
 
-    public List<Comment> comments
+    // Attaches the list of comments for the video
+    public List<Comment> Comments
     {
         get { return _comments; }
     }
 
+    // Method to return the number of comments.
     public int GetCommentCount()
     {
         return _comments.Count;
